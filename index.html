@@ -8,71 +8,83 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="smoothLoading">
+
     <!-- Header Section -->
-    <header>
-        <h1>Andrii Stasiuk</h1>
-        <p>SDET | Automation Enthusiast | Problem Solver</p>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Tech Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="#" class="header__logo-link">Andrii Stasiuk</a>
+            <nav class="header__navigation">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#about" class="header__link">About Me</a></li>
+                    <li class="header__item"><a href="#projects" class="header__link">Projects</a></li>
+                    <li class="header__item"><a href="#skills" class="header__link">Tech Skills</a></li>
+                    <li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi, I’m <strong>Andrii Stasiuk</strong>, a <em>Software Development Engineer in Test (SDET)</em>
-            with a passion for delivering high-quality software through automation and testing.
-        </p>
-        <p>
-            I bridge the gap between development and testing with efficient automation tools and practices.
-            Beyond coding, I enjoy running marathons and solving complex challenges!
-        </p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="title">About Me</h2>
+            <p class="text__about">
+                Hi, I’m <strong>Andrii Stasiuk</strong>, a <em>Software Development Engineer in Test (SDET)</em>
+                with a passion for delivering high-quality software through robust test automation.
+            </p>
+            <p class="text__about">
+                I bridge the gap between development and testing with efficient automation solutions. Outside coding,
+                I train for marathons and solve complex technical challenges.
+            </p>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Test Automation Framework</h3>
-            <p>Scalable Selenium-based framework reducing manual testing time by 50%.</p>
-            <p><strong>Technologies:</strong> Java, Selenium, TestNG, Maven, Cucumber</p>
-            <a href="https://github.com/andrii-stasiuk/test-automation-framework" target="_blank">GitHub</a>
-        </div>
-
-        <div class="project">
-            <h3>REST API Testing Suite</h3>
-            <p>Built REST API test suites ensuring API reliability and performance.</p>
-            <p><strong>Technologies:</strong> Postman, RestAssured, Jenkins</p>
-            <a href="https://github.com/andrii-stasiuk/rest-api-testing" target="_blank">GitHub</a>
+    <section class="project" id="projects">
+        <div class="container">
+            <h2 class="title">Projects</h2>
+            <div class="project__item">
+                <h3 class="project__name">Test Automation Framework</h3>
+                <p>Scalable Selenium framework reducing testing time by 50%.</p>
+                <a href="https://github.com/andrii-stasiuk/test-automation-framework" class="project__link"
+                    target="_blank">View Project</a>
+            </div>
+            <div class="project__item">
+                <h3 class="project__name">REST API Testing Suite</h3>
+                <p>Built a REST API test suite for backend validation and performance.</p>
+                <a href="https://github.com/andrii-stasiuk/rest-api-testing" class="project__link" target="_blank">View
+                    Project</a>
+            </div>
         </div>
     </section>
 
     <!-- Tech Skills Section -->
-    <section id="skills">
-        <h2>Tech Skills</h2>
-        <ul>
-            <li>Programming: Java, Python, JavaScript</li>
-            <li>Automation: Selenium, Cucumber, TestNG</li>
-            <li>API Testing: Postman, RestAssured</li>
-            <li>CI/CD: Jenkins, Docker</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Tools: IntelliJ, VS Code</li>
-        </ul>
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="title">Tech Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__item skills__item_show">Programming: Java, Python, JavaScript</li>
+                <li class="skills__item skills__item_show">Automation: Selenium, Cucumber, TestNG</li>
+                <li class="skills__item skills__item_show">API Testing: Postman, RestAssured</li>
+                <li class="skills__item skills__item_show">CI/CD: Jenkins, Docker</li>
+                <li class="skills__item skills__item_show">Version Control: Git, GitHub</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:andrii@example.com">andrii@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/andriistasiuk" target="_blank">linkedin.com/in/andriistasiuk</a>
-        </p>
-        <p>GitHub: <a href="https://github.com/andrii-stasiuk" target="_blank">github.com/andrii-stasiuk</a></p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="title">Contact</h2>
+            <p>Email: <a href="mailto:andrii@example.com" class="project__link">andrii@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/andriistasiuk" class="project__link"
+                    target="_blank">linkedin.com/in/andriistasiuk</a></p>
+            <p>GitHub: <a href="https://github.com/andrii-stasiuk" class="project__link"
+                    target="_blank">github.com/andrii-stasiuk</a></p>
+        </div>
     </section>
+
 </body>
 
 </html>
