@@ -9,57 +9,84 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.5em 0;
 }
 
 header h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
+    margin-bottom: 0.5em;
 }
 
-header nav a {
+nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
-    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.1em;
 }
 
-header nav a:hover {
-    color: #17a2b8;
+nav a:hover {
+    text-decoration: underline;
 }
 
+/* Sections */
 section {
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    border-bottom: 2px solid #17a2b8;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    margin-bottom: 10px;
+    color: #444;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-section p, section ul {
-    margin-bottom: 1rem;
+p {
+    margin-bottom: 15px;
 }
 
-a {
-    color: #17a2b8;
+.project {
+    margin-bottom: 20px;
+}
+
+.project a {
+    display: inline-block;
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Tech Skills */
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact */
+section#contact a {
+    color: #007BFF;
     text-decoration: none;
 }
 
-a:hover {
+section#contact a:hover {
     text-decoration: underline;
 }
