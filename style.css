@@ -1,127 +1,59 @@
-/* General Body Styling */
 body {
     font-family: 'Arial', sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-    position: relative;
+    padding: 1rem;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1.5px;
+h2 {
+    margin-top: 30px;
 }
 
-header button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-header button:hover {
-    background-color: #0056b3;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #333;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
+.progress-container {
     display: flex;
     justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    gap: 50px;
+    margin-top: 30px;
 }
 
-nav li {
-    margin: 0 15px;
+.progress-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+svg {
+    transform: rotate(-90deg);
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate-circle 2s linear forwards;
+}
+
+@keyframes animate-circle {
+    to {
+        stroke-dashoffset: 157.5;
+        /* Adjusted for 65% progress */
+    }
+}
+
+.skill-number {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
     font-weight: bold;
-}
-
-nav a:hover {
-    color: #007BFF;
-}
-
-/* Container and Section Styling */
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-/* Interactive Cards */
-.project {
-    background: #fff;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: auto;
-}
-
-input,
-textarea,
-button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
