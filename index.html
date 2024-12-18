@@ -12,17 +12,25 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
             background-color: #333;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background: white;
@@ -30,15 +38,42 @@
             border-radius: 8px;
         }
 
-        h1,
         h2 {
             color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
         ul {
-            list-style-type: square;
+            list-style-type: disc;
             margin: 0;
             padding: 0 0 0 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
