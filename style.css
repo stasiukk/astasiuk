@@ -1,10 +1,11 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -12,7 +13,7 @@ header {
     color: white;
     padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 header h1 {
@@ -21,6 +22,54 @@ header h1 {
     letter-spacing: 1.5px;
 }
 
+header button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Container and Section Styling */
 .container {
     max-width: 900px;
     margin: 20px auto;
@@ -30,40 +79,49 @@ header h1 {
     border-radius: 8px;
 }
 
-h2 {
-    color: #444;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style-type: disc;
-    margin: 0;
-    padding: 0 0 0 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
 section {
     margin-bottom: 30px;
 }
 
-section:last-of-type {
-    margin-bottom: 0;
+/* Interactive Cards */
+.project {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
-    text-decoration: underline;
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

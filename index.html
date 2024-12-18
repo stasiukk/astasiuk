@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Andrii Stasiuk</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 
-<body>
+<body class="light-mode">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
+    <!-- Header -->
     <header>
         <h1>Andrii Stasiuk</h1>
+        <button id="theme-toggle">Switch Theme</button>
     </header>
 
     <div class="container">
-        <section>
+        <!-- Summary Section -->
+        <section id="summary" data-aos="fade-up">
             <h2>Professional Summary</h2>
-            <p>
-                Experienced Software Development Engineer in Test (SDET) with expertise in developing robust frameworks,
-                automating tests, and ensuring software quality across various platforms. Dedicated to continuous
-                learning
-                and delivering high-quality results in a fast-paced environment.
-            </p>
+            <p>Experienced SDET with expertise in developing robust frameworks, automating tests, and ensuring software
+                quality across platforms.</p>
         </section>
 
-        <section>
+        <!-- Experience Section -->
+        <section id="experience" data-aos="fade-up">
             <h2>Work Experience</h2>
-            <p><strong>[Job Title]</strong> - [Company Name]</p>
-            <p>Dates: [Start Date] - [End Date or Present]</p>
-            <ul>
-                <li>Key responsibility 1</li>
-                <li>Key responsibility 2</li>
-                <li>Key responsibility 3</li>
-            </ul>
-            <p><strong>[Previous Job Title]</strong> - [Previous Company Name]</p>
-            <p>Dates: [Start Date] - [End Date]</p>
+            <p><strong>Job Title</strong> - Company Name</p>
+            <p>Dates: Start Date - End Date</p>
             <ul>
                 <li>Key responsibility 1</li>
                 <li>Key responsibility 2</li>
@@ -43,60 +48,59 @@
             </ul>
         </section>
 
-        <section>
+        <!-- Skills Section -->
+        <section id="skills" data-aos="fade-up">
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Java (Core Java, OOP concepts)</li>
-                <li><strong>Test Automation Tools:</strong> Selenium WebDriver, Appium, Cucumber (BDD Framework)</li>
-                <li><strong>API Testing Tools:</strong> RestAssured, Postman</li>
-                <li><strong>Build and Dependency Management:</strong> Maven</li>
-                <li><strong>CI/CD Tools:</strong> Jenkins</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>Test Management:</strong> Jira</li>
-                <li><strong>Database Testing:</strong> SQL, JDBC</li>
-                <li><strong>Reporting:</strong> Cucumber HTML Reports, Extent Reports</li>
-                <li><strong>Cross-Browser Testing:</strong> Selenium Grid, BrowserStack/Sauce Labs</li>
-                <li><strong>IDEs:</strong> IntelliJ IDEA, Visual Studio Code</li>
-                <li><strong>Frameworks:</strong> POM-based Automation Framework, BDD with Cucumber/Gherkin</li>
-                <li><strong>Additional Tools:</strong> Apache POI, Log4j, Faker Library</li>
-                <li><strong>Agile Practices:</strong> Scrum (Sprint Planning, Daily Stand-ups, Retrospectives, Demos)
-                </li>
+                <li>Programming: Java, Selenium, RestAssured</li>
+                <li>Frameworks: BDD, POM-based Automation</li>
+                <li>API Tools: Postman</li>
+                <li>CI/CD: Jenkins</li>
             </ul>
         </section>
 
-        <section>
+        <!-- Education Section -->
+        <section id="education" data-aos="fade-up">
             <h2>Education</h2>
             <ul>
-                <li><strong>Wilmington University, New Castle, DE</strong> - Bachelor of Science in Cybersecurity, May
-                    2023</li>
-                <ul>
-                    <li>GPA: 3.83</li>
-                    <li>Dean’s List</li>
-                </ul>
-                <li><strong>Delaware Technical Community College, Wilmington, DE</strong> - Associate of Science in
-                    Information Technology & Networking, December 2021</li>
-                <ul>
-                    <li>Certificate in English as a Second Language, May 2020</li>
-                    <li>Phi Theta Kappa Honor Society</li>
-                    <li>GPA: 4.0</li>
-                </ul>
-                <li><strong>Pedagogical University of Krakow, Krakow, Poland</strong> - Bachelor of Computer Science,
-                    March 2017</li>
-                <li><strong>Burshtyn Energy College, Burshtyn, Ukraine</strong> - Associate of Science in Electrical
-                    Engineering, April 2015</li>
+                <li>Bachelor of Science in Cybersecurity, Wilmington University</li>
+                <li>Associate of Science in IT, Delaware Tech Community College</li>
             </ul>
         </section>
 
-        <section>
+        <!-- Projects Section -->
+        <section id="projects" data-aos="fade-up">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>Project 1:</strong> [Brief description of the project]</li>
-                <li><strong>Project 2:</strong> [Brief description of the project]</li>
-                <li><strong>Project 3:</strong> [Brief description of the project]</li>
-            </ul>
+            <div id="filters">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web Development</button>
+                <button onclick="filterProjects('testing')">Testing</button>
+            </div>
+            <div id="project-cards">
+                <div class="project web">Web Project 1</div>
+                <div class="project testing">Testing Project 1</div>
+                <div class="project web">Web Project 2</div>
+                <div class="project testing">Testing Project 2</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
