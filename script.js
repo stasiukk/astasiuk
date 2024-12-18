@@ -17,6 +17,7 @@ function filterProjects(category) {
     });
 }
 
+
 const progressCircles = document.querySelectorAll('.progress-circle');
 
 progressCircles.forEach((circle) => {
